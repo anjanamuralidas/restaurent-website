@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Crispy Kitchen - Contact Page</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/tooplate-crispy-kitchen.css" rel="stylesheet">
+    <!--
+
+Tooplate 2129 Crispy Kitchen
+
+https://www.tooplate.com/view/2129-crispy-kitchen
+
+-->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+            <p> Crispy Kitchen</p>
+
+
+            <div class="d-lg-none">
+                <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal">Registration</button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container"><br>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div style="background-color: slategray;" class="col-sm-6">
+                <form method="post" action="/login/add">
+                    <label for="contact-name" class="form-label">username</label>
+
+                    <input type="text" name="username" id="contact-name" class="form-control" placeholder="username" required>
+
+                    <label for="name" class="form-label">password</label>
+
+                    <input type="password" name="password" id="contact-name" class="form-control" placeholder="password" required><br>
+
+
+                    <button style="margin-bottom: 20px;" type="submit" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal">submit</button>
+                    <a href="/contact">new registration</a>
+                </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

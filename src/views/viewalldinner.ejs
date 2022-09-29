@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Crispy Kitchen - Contact Page</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/tooplate-crispy-kitchen.css" rel="stylesheet">
+    <!--
+
+Tooplate 2129 Crispy Kitchen
+
+https://www.tooplate.com/view/2129-crispy-kitchen
+
+-->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <a class="navbar-brand">
+                    Crispy Kitchen
+                </a>
+
+            <div class="d-lg-none">
+                <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal">Reservation</button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <%for(var i=0;i<ind.length;i++){%>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="<%=ind[i].link%>">
+                                <%=ind[i].name%>
+                            </a>
+                        </li>
+                        <%}%>
+                </ul>
+            </div>
+
+            <div class="d-none d-lg-block">
+                <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal"><a href="/menucategory/contact">registration</a></button>
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <%for(var i=0;i<dinnerdata.length;i++){%>
+                    <div class="col-lg-4 col-md-6 col-12">
+
+                        <div class="menu-thumb">
+
+                            <img style="padding-top: 20px; height:400px; width:500;" src="/images/upload/<%=dinnerdata[i].image%>" class="img-fluid menu-image" alt="">
+
+                            <div class="menu-info d-flex flex-wrap align-items-center">
+                                <h4 class="mb-0">
+                                    <%=dinnerdata[i].foodname%>
+                                </h4>
+
+                                <span class="price-tag bg-white shadow-lg ms-4"><small>$</small> <%=dinnerdata[i].rate%></span>
+
+
+                                <div>
+
+                                </div>
+                            </div>
+                            <a href="/menu/singledinner/<%=dinnerdata[i]._id%>">view</a>
+                            <a href="/menu/delete/<%=dinnerdata[i]._id%>">delete</a>
+                            <a href="/menu/edit/<%=dinnerdata[i]._id%>">update</a>
+                        </div>
+                    </div>
+                    <%}%>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js "></script>
+    <script src="js/bootstrap.bundle.min.js "></script>
+    <script src="js/custom.js "></script>
+
+</body>
+
+</html>
